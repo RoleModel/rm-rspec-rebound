@@ -8,13 +8,13 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Retry intermittently failing RSpec examples to eliminate flaky tests and increase test suite stability without modifying your existing specs.}
   gem.homepage      = "https://github.com/windmotion-io/rspec-rebound"
   gem.license       = "MIT"
-  
+
   gem.required_ruby_version = ">= 2.0"
-  
+
   gem.files         = `git ls-files`.split($\)
   gem.executables   = []
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "rspec-rebound"
+  gem.name          = "rm-rspec-rebound"
   gem.require_paths = ["lib"]
   gem.version       = RSpec::Rebound::VERSION
   gem.add_runtime_dependency "rspec-core", "~> 3.3"
