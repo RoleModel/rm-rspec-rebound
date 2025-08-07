@@ -24,7 +24,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 # Unlike rspec, this doesn't need to be included in development group
-gem 'rspec-rebound', :git => 'git@github.com:RoleModel/rm-rspec-rebound.git'
+gem 'rspec-rebound', :git => 'git@github.com:RoleModel/rspec-rebound.git'
 ```
 
 And then execute:
@@ -33,7 +33,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install 'rspec-rebound', :git => 'git@github.com:RoleModel/rm-rspec-rebound.git'
+    $ gem install 'rspec-rebound', :git => 'git@github.com:RoleModel/rspec-rebound.git'
 
 require in ``spec_helper.rb``
 
