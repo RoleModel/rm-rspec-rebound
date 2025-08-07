@@ -23,7 +23,8 @@ This gem is derived from the [rspec-retry](https://github.com/NoRedInk/rspec-ret
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rspec-rebound', group: :test # Unlike rspec, this doesn't need to be included in development group
+# Unlike rspec, this doesn't need to be included in development group
+gem 'rm-rspec-rebound', :git => 'git@github.com:RoleModel/rm-rspec-rebound.git'
 ```
 
 And then execute:
@@ -32,7 +33,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rspec-rebound
+    $ gem install 'rm-rspec-rebound', :git => 'git@github.com:RoleModel/rm-rspec-rebound.git'
 
 require in ``spec_helper.rb``
 
