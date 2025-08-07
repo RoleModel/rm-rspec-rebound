@@ -38,10 +38,6 @@ module RSpec
 
         # If true, flaky tests will be detected and reported, even if the retry count is set to 0. This is useful for detecting flaky tests that are not being retried.
         config.add_setting :flaky_spec_detection, :default => false
-
-        config.around(:each) do |ex|
-          ex.run_with_retry
-        end
       end
     end
 
@@ -139,7 +135,6 @@ module RSpec
               if display_try_failure_messages?
                 display_try_failure_message(example, attempts, retry_count)
               end
-              example.exception = example.metadata[:retry_exceptions].last
             end
           end
         end
@@ -209,7 +204,7 @@ module RSpec
 
     def display_try_failure_message(example, attempts, retry_count)
       return if attempts == retry_count + 1
-      
+
       exception_strings =
         if ::RSpec::Core::MultipleExceptionError::InterfaceTag === example.exception
           example.exception.all_exceptions.map(&:to_s)
